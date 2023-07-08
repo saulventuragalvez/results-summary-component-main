@@ -1,0 +1,204 @@
+:root {
+    /*Color Primary*/
+    --primero: hsl(0, 100%, 67%);
+    --segundo: hsl(39, 100%, 56%);
+    --tercero: hsl(166, 100%, 37%);
+    --cuarto: hsl(234, 85%, 45%);
+
+    /*Gradient*/
+    --gradient-back-royal: hsl(252, 100%, 67%);
+    --gradient-back-slate: hsl(241, 81%, 54%);
+    --gradient-circle-violet: hsla(256, 72%, 46%, 1);
+    --gradient-circle-persian: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%); /*SHADOW*/
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+    background-color: var(--pale-blue);
+}
+
+/*GLOBALES*/
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--white);
+    margin: 0;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+h3 {
+    font-size: 2rem;
+}
+p {
+    margin: 0;
+}
+
+/*MAIN*/
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 768px) { 
+    .principal {
+        height: 95vh;
+    }
+}
+.card {
+    width: 65rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+}
+@media (min-width: 768px) { 
+    .card {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        webkit-box-shadow: 10px 10px 34px -24px rgba(48,54,69,1);
+        moz-box-shadow: 10px 10px 34px -24px rgba(48,54,69,1);
+        box-shadow: 10px 10px 34px -24px rgba(48,54,69,1);
+    }
+}
+
+/*LEFT*/
+
+.card__left {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-image: linear-gradient(
+        var(--gradient-back-royal),
+        var(--gradient-back-slate)
+    );
+}
+
+@media (min-width: 768px) { 
+    .card__left {
+        border-radius: 2rem;
+    }
+}
+.card__left h3 {
+    color: var(--light-lavender);
+    font-weight: 700;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        var(--gradient-circle-violet),
+        var(--gradient-circle-persian)
+    );
+}
+.circle p {
+    color: var(--light-lavender);
+}
+.description {
+    color: var(--light-lavender);
+    padding: 2rem;
+}
+
+/*RIGHT*/
+.card__right {
+    padding: 3rem;
+}
+.card__right h3 {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+.card__right--items {
+    display: flex;
+    flex-direction: column;
+}
+.items {
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.number p {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+.number__span {
+    color: var(--light-lavender);
+    margin-left: 0.5rem;
+}
+.icon {
+    display: flex;
+    column-gap: 1rem;
+}
+.reaction {
+    background-color: #fff6f5;
+    color: var(--primero);
+}
+.memory {
+    background-color: #fff8eb;
+    color: var(--segundo);
+}
+.verbal {
+    background-color: #f2fbfa;
+    color: var(--tercero);
+}
+.visual {
+    background-color: #f3f3fd;
+    color: var(--cuarto);
+}
+.boton {
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.boton:hover {
+    background-image: linear-gradient(
+        var(--gradient-back-royal),
+        var(--gradient-back-slate)
+    );
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:50px;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
