@@ -190,15 +190,22 @@ p {
         var(--gradient-back-slate)
     );
 }
+
 .attribution {
-    font-size: 11px;
-    text-align: center;
-    position: absolute;
-    left:0px;
-    right:0px;
-    bottom:0px;
-    height:50px;
+    display: none;
 }
-.attribution a {
-     color: hsl(228, 45%, 44%);
+@media (min-width: 768px) { 
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        height:50px;
+    }
+    .attribution a {
+         color: hsl(228, 45%, 44%);
+    }
+    
 }
